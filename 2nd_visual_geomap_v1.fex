@@ -17,9 +17,9 @@ END
 SET COMPONENT=TableChart_1
 SET ARVERSION=2
 -DEFAULTH &WF_TITLE='WebFOCUS Report';
--DEFAULT &NOM_FILIALE = _FOC_NULL;
--DEFAULT &DATE_DEBUT_RELATION_YEAR_M_FROM = _FOC_NULL;
--DEFAULT &DATE_DEBUT_RELATION_YEAR_M_TO = _FOC_NULL;
+-DEFAULTH &NOM_FILIALE = _FOC_NULL;
+-DEFAULTH &DATE_DEBUT_RELATION_YEAR_M_FROM = _FOC_NULL;
+-DEFAULTH &DATE_DEBUT_RELATION_YEAR_M_TO = _FOC_NULL;
 GRAPH FILE poc_visualizations/hold_tables/sales_poc_view_bv
 -* Created by Designer for Graph
 SUM SALES_POC_VIEW_BV.SALE0001.SALES_TY/P22.2C:C
@@ -36,7 +36,7 @@ ON GRAPH SET EMBEDHEADING ON
 ON GRAPH SET AUTOFIT ON
 ON GRAPH SET STYLE *
 INCLUDE=IBFS:/WFC/Global/Themes/Standard/Default/theme.sty,$
-TYPE=REPORT, TITLETEXT='Chart1', ORIENTATION=LANDSCAPE, ARREPORTSIZE=DIMENSION, ARFILTER_TARGET='*', CHART-LOOK=com.esri.map, ARGRAPHENGINE=JSCHART, $
+TYPE=REPORT, TITLETEXT='Chart1', ORIENTATION=LANDSCAPE, ARREPORTSIZE=DIMENSION, ARFILTER_TARGET='*', CHART-LOOK=com.esri.map, ARGRAPHENGINE=JSCHART, CHART-COLOR-MEASURES=OFF, $
 TYPE=DATA, COLUMN=N2, BUCKET=color, $
 *GRAPH_SCRIPT
 
@@ -61,8 +61,20 @@ TYPE=DATA, COLUMN=N2, BUCKET=color, $
         }
     }
 },
+"series":     [
+        {
+            "dataLabels": {
+                "visible": false,
+                "font": "10pt Sans-Serif"
+            },
+            "series": "all"
+        }
+    ],
 "pieProperties": {
     "holeSize": "0%"
+},
+"blaProperties": {
+    "splitY": true
 },
 "agnosticSettings": {
     "chartTypeFullName": "Choropleth"

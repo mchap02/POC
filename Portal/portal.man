@@ -1,0 +1,1 @@
+{"navigation":"2-top","logo":"","maxWidth":"100pc","banner":true,"showPortalTitleInBanner":false,"showTopNavigationInBanner":false,"createMyPageMenu":false,"theme":"IBFS:/WFC/Global/Themes/Custom/Deschenes_Group/theme.css","alias":""}
